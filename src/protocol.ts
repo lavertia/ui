@@ -1,4 +1,5 @@
 import type { LavertiaTheme } from './theme.js';
+import type { LavertiaUiKit } from './ui-kit.js';
 
 export type Scalar = string | number | boolean | null;
 
@@ -25,6 +26,7 @@ export interface LavertiaPayload {
     locale?: string;
     direction?: 'ltr' | 'rtl';
     theme?: LavertiaTheme;
+    uiKit?: LavertiaUiKit;
 }
 
 export type TableRow = Record<string, Scalar>;
