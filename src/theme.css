@@ -1,0 +1,34 @@
+/* Lavertia UI semantic tokens. Scope all rules to a Lavertia page. */
+.lvt-root {
+    --lvt-primary: #b45309;
+    --lvt-primary-foreground: #ffffff;
+    --lvt-sidebar-primary: #b45309;
+    --lvt-sidebar-primary-foreground: #ffffff;
+    --lvt-ring: #d97706;
+}
+
+.lvt-root .lvt-primary {
+    background-color: var(--lvt-primary);
+    color: var(--lvt-primary-foreground);
+}
+.lvt-root .lvt-primary:hover:not(:disabled) { filter: brightness(1.08); }
+.lvt-root .lvt-primary:disabled { opacity: .5; }
+
+.lvt-root .lvt-nav-active {
+    background-color: color-mix(in srgb, var(--lvt-sidebar-primary) 13%, transparent);
+    color: var(--lvt-sidebar-primary);
+}
+.lvt-root .lvt-eyebrow { color: var(--lvt-primary); }
+.lvt-root .lvt-stat-primary {
+    background-color: var(--lvt-primary);
+    --tw-ring-color: color-mix(in srgb, var(--lvt-ring) 20%, transparent);
+}
+.lvt-root .lvt-focus:focus-visible {
+    outline: 2px solid var(--lvt-ring);
+    outline-offset: 2px;
+}
+.lvt-root .lvt-input:focus {
+    border-color: var(--lvt-ring);
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--lvt-ring) 22%, transparent);
+}
